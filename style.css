@@ -1,0 +1,176 @@
+/* ===================== */
+/* BACKGROUND GRADIENT */
+/* ===================== */
+
+.bg-gradient-custom {
+    background: linear-gradient(to bottom, #a7c7e7, #f4f4f9);
+    min-height: 100vh;
+}
+
+/* ===================== */
+/* SIDEBAR */
+/* ===================== */
+
+.sidebar-custom {
+    width: 250px;
+    z-index: 1000;
+}
+
+.sidebar-link {
+    color: #cbd5e1 !important;
+    padding: 8px 0 !important;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.sidebar-link:hover {
+    color: white !important;
+    padding-left: 5px !important;
+}
+
+/* ===================== */
+/* MAIN CONTENT */
+/* ===================== */
+
+.main-content-custom {
+    margin-left: 250px;
+}
+
+@media (max-width: 767.98px) {
+    .main-content-custom {
+        margin-left: 0;
+    }
+}
+
+/* ===================== */
+/* LESSON CARDS */
+/* ===================== */
+
+.lesson-card {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+}
+
+/* ===================== */
+/* BACKGROUND BOXES */
+/* ===================== */
+
+.box-background-demo {
+    width: 120px;
+    height: 80px;
+}
+
+.gradient-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.pattern-box {
+    background: repeating-linear-gradient(
+        45deg,
+        #606dbc,
+        #606dbc 10px,
+        #465298 10px,
+        #465298 20px
+    );
+}
+
+/* ===================== */
+/* OPACITY */
+/* ===================== */
+
+.opacity-box {
+    width: 120px;
+    height: 120px;
+}
+
+.opacity-red {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.opacity-blue {
+    background: rgba(0, 0, 255, 0.5);
+    opacity: 0.4;
+}
+
+/* ===================== */
+/* FLEXBOX */
+/* ===================== */
+
+.flex-box {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.2s;
+}
+
+.flex-box:hover {
+    transform: scale(1.1);
+}
+
+/* ===================== */
+/* GRID */
+/* ===================== */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-box {
+    padding: 20px;
+    min-height: 80px;
+    transition: transform 0.2s;
+}
+
+.grid-box:hover {
+    transform: scale(1.05);
+}
+
+/* ===================== */
+/* POZICIONIRANJE */
+/* ===================== */
+
+.position-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.relative-box {
+    width: 200px;
+    height: 120px;
+}
+
+.absolute-box {
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* ===================== */
+/* PSEUDO DEMO */
+/* ===================== */
+
+.pseudo-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.pseudo-list li:first-child {
+    background-color: #e7f3ff;
+}
+
+.pseudo-list li:last-child {
+    background-color: #fff3e0;
+}

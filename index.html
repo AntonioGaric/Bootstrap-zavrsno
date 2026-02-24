@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skripta - Antonio Garić</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-custom">
+    <!-- Sidebar Navigation -->
+    <nav class="navbar navbar-dark bg-dark sidebar-custom d-none d-md-block position-fixed vh-100 overflow-auto">
+        <div class="container-fluid flex-column align-items-start p-3">
+            <h2 class="text-white mb-3 pb-2 border-bottom border-secondary w-100">SADRŽAJ</h2>
+            <nav class="nav flex-column w-100">
+                <a class="nav-link text-light sidebar-link" href="#css">Dodavanje CSS-a</a>
+                <a class="nav-link text-light sidebar-link" href="#elementi">HTML Elementi</a>
+                <a class="nav-link text-light sidebar-link" href="#background">CSS Background</a>
+                <a class="nav-link text-light sidebar-link" href="#opacity">CSS Opacity</a>
+                <a class="nav-link text-light sidebar-link" href="#forme">HTML Forme</a>
+                <a class="nav-link text-light sidebar-link" href="#pseudo">CSS Pseudoklase</a>
+                <a class="nav-link text-light sidebar-link" href="#flex">CSS Flexbox</a>
+                <a class="nav-link text-light sidebar-link" href="#grid">CSS Grid</a>
+                <a class="nav-link text-light sidebar-link" href="#position">CSS Pozicioniranje</a>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="btn btn-primary d-md-none position-fixed top-0 start-0 m-3 z-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Mobile Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileSidebar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">SADRŽAJ</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav class="nav flex-column">
+                <a class="nav-link text-light sidebar-link" href="#css" data-bs-dismiss="offcanvas">Dodavanje CSS-a</a>
+                <a class="nav-link text-light sidebar-link" href="#elementi" data-bs-dismiss="offcanvas">HTML Elementi</a>
+                <a class="nav-link text-light sidebar-link" href="#background" data-bs-dismiss="offcanvas">CSS Background</a>
+                <a class="nav-link text-light sidebar-link" href="#opacity" data-bs-dismiss="offcanvas">CSS Opacity</a>
+                <a class="nav-link text-light sidebar-link" href="#forme" data-bs-dismiss="offcanvas">HTML Forme</a>
+                <a class="nav-link text-light sidebar-link" href="#pseudo" data-bs-dismiss="offcanvas">CSS Pseudoklase</a>
+                <a class="nav-link text-light sidebar-link" href="#flex" data-bs-dismiss="offcanvas">CSS Flexbox</a>
+                <a class="nav-link text-light sidebar-link" href="#grid" data-bs-dismiss="offcanvas">CSS Grid</a>
+                <a class="nav-link text-light sidebar-link" href="#position" data-bs-dismiss="offcanvas">CSS Pozicioniranje</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content-custom">
+        <!-- Header -->
+        <header class="bg-primary text-white text-center py-4 shadow mb-4">
+            <div class="container">
+                <h1 class="mb-0">Skripta - Antonio Garić</h1>
+            </div>
+        </header>
+
+        <!-- Content Container -->
+        <div class="container py-4">
+            <!-- CSS Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="css">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">Dodavanje CSS-a u HTML</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Što je CSS?</strong><br> CSS služi za oblikovanje HTML elemenata (boje, fontovi, raspored...)</p>
+                    <p><strong>Načini dodavanja:</strong></p>
+                    <ul>
+                        <li>Inline – unutar taga pomoću style</li>
+                        <li>Internal – u style dijelu</li>
+                        <li>External – u posebnoj .css datoteci</li>
+                    </ul>
+                    <div class="alert alert-warning mb-0">
+                        Preporučuje se koristiti <strong>external CSS</strong> jer se isti stil može koristiti na više stranica.
+                    </div>
+                </div>
+            </div>
+
+            <!-- HTML Elementi Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="elementi">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">Ključni elementi koje smo učili</h2>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>&lt;html&gt;</strong> – glavni kontejner za sve HTML elemente</li>
+                        <li><strong>&lt;head&gt;</strong> – sadrži meta informacije o stranici</li>
+                        <li><strong>&lt;body&gt;</strong> – sadrži vidljivi sadržaj stranice</li>
+                        <li><strong>h1 - h6</strong> – naslovi različitih veličina</li>
+                        <li><strong>p</strong> – paragrafi teksta</li>
+                    </ul>
+                    <div class="alert alert-warning">
+                        <strong>Važno:</strong> HTML tagovi se uvijek zatvaraju! Svaki otvoreni tag mora imati svoj zatvoreni tag (osim self-closing tagova poput &lt;br&gt;, &lt;img&gt;).
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">HTML</span>
+                        <span class="badge bg-secondary me-2">Struktura</span>
+                        <span class="badge bg-secondary">Osnove</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="background">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">CSS Background za Boxove</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Što je background?</strong><br> Svojstvo background određuje boju, gradijent ili sliku unutar elementa.</p>
+                    <p><strong>Primjeri:</strong></p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center my-3">
+                        <div class="box-background-demo bg-primary text-white d-flex align-items-center justify-content-center rounded">Box 1</div>
+                        <div class="box-background-demo gradient-box text-white d-flex align-items-center justify-content-center rounded">Box 2</div>
+                        <div class="box-background-demo bg-success text-white d-flex align-items-center justify-content-center rounded">Box 3</div>
+                        <div class="box-background-demo pattern-box text-white d-flex align-items-center justify-content-center rounded">Box 4</div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Napomena:</strong> Možeš koristiti jednobojne pozadine, gradijente ili slike kao pozadinu.
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">CSS</span>
+                        <span class="badge bg-secondary me-2">Background</span>
+                        <span class="badge bg-secondary">Box</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opacity Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="opacity">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">CSS Opacity</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Što je opacity?</strong><br> Svojstvo opacity određuje prozirnost elementa. Vrijednosti idu od 0 (potpuno nevidljivo) do 1 (potpuno vidljivo).</p>
+                    <div class="alert alert-warning">
+                        <strong>Napomena:</strong> Kada koristiš opacity na elementu, svi njegovi unutarnji elementi (tekst, slike...) također postaju prozirni. Ako želiš da samo pozadina bude prozirna, koristi rgba() boje.
+                    </div>
+                    <p><strong>Primjer razlike:</strong></p>
+                    <div class="d-flex gap-4 justify-content-center my-3">
+                        <div class="opacity-box opacity-red d-flex align-items-center justify-content-center rounded fw-bold text-white">Tekst</div>
+                        <div class="opacity-box opacity-blue d-flex align-items-center justify-content-center rounded fw-bold text-white">Tekst</div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">CSS</span>
+                        <span class="badge bg-secondary me-2">Opacity</span>
+                        <span class="badge bg-secondary">Stilovi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forme Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="forme">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">HTML Forme</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Što su forme?</strong><br> HTML forme služe za unos podataka od strane korisnika (ime, email, poruke...).</p>
+                    <p><strong>Najčešći elementi formi:</strong></p>
+                    <ul>
+                        <li><strong>&lt;form&gt;</strong> – glavni kontejner forme</li>
+                        <li><strong>&lt;label&gt;</strong> – opis input polja</li>
+                        <li><strong>&lt;input&gt;</strong> – unos podataka</li>
+                        <li><strong>&lt;textarea&gt;</strong> – unos duljeg teksta</li>
+                        <li><strong>&lt;button&gt;</strong> – gumb za slanje</li>
+                    </ul>
+                    <p><strong>Primjer forme:</strong></p>
+                    <form class="demo-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ime:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Unesi ime">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Unesi email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Poruka:</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Unesi poruku"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pošalji</button>
+                    </form>
+                    <div class="alert alert-warning mt-3">
+                        <strong>Napomena:</strong> Forme se često povezuju s backendom ili JavaScriptom kako bi se podaci obradili.
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">HTML</span>
+                        <span class="badge bg-secondary me-2">Forme</span>
+                        <span class="badge bg-secondary">Input</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pseudoklase Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="pseudo">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">CSS Pseudoklase</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Što su pseudoklase?</strong><br> Pseudoklase definiraju posebno stanje elementa (npr. kada miš prelazi preko elementa).</p>
+                    <p><strong>Najčešće pseudoklase:</strong></p>
+                    <ul>
+                        <li><strong>:hover</strong> – aktivira se kada miš prelazi preko elementa</li>
+                        <li><strong>:focus</strong> – kada je element aktivan (npr. input polje)</li>
+                        <li><strong>:first-child</strong> – prvi element unutar roditelja</li>
+                        <li><strong>:last-child</strong> – zadnji element unutar roditelja</li>
+                    </ul>
+                    <div class="pseudo-demo my-3">
+                        <button class="btn btn-outline-primary pseudo-btn">Pređi mišem</button>
+                        <ul class="list-group mt-3 pseudo-list">
+                            <li class="list-group-item">Prvi element</li>
+                            <li class="list-group-item">Srednji element</li>
+                            <li class="list-group-item">Zadnji element</li>
+                        </ul>
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Napomena:</strong> Pseudoklase omogućuju interakciju bez JavaScripta.
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">CSS</span>
+                        <span class="badge bg-secondary me-2">Pseudoklase</span>
+                        <span class="badge bg-secondary">Hover</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flexbox Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="flex">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">CSS Flexbox</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Što je Flexbox?</strong><br> Flexbox služi za jednostavno poravnanje elemenata u red ili stupac.</p>
+                    <p><strong>Važna svojstva:</strong></p>
+                    <ul>
+                        <li><strong>display: flex</strong></li>
+                        <li><strong>justify-content</strong> – horizontalno poravnanje</li>
+                        <li><strong>align-items</strong> – vertikalno poravnanje</li>
+                        <li><strong>flex-direction</strong> – red ili stupac</li>
+                    </ul>
+                    <div class="d-flex justify-content-around align-items-center my-3">
+                        <div class="flex-box bg-info text-white d-flex align-items-center justify-content-center rounded fw-bold">1</div>
+                        <div class="flex-box bg-info text-white d-flex align-items-center justify-content-center rounded fw-bold">2</div>
+                        <div class="flex-box bg-info text-white d-flex align-items-center justify-content-center rounded fw-bold">3</div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Napomena:</strong> Flexbox je idealan za navigacije, kartice i centriranje sadržaja.
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">CSS</span>
+                        <span class="badge bg-secondary me-2">Flexbox</span>
+                        <span class="badge bg-secondary">Layout</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="grid">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">CSS Grid</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Što je Grid?</strong><br> CSS Grid omogućuje raspored elemenata u redove i stupce (2D layout sustav).</p>
+                    <p><strong>Važna svojstva:</strong></p>
+                    <ul>
+                        <li><strong>display: grid</strong></li>
+                        <li><strong>grid-template-columns</strong></li>
+                        <li><strong>grid-template-rows</strong></li>
+                        <li><strong>gap</strong> – razmak između elemenata</li>
+                    </ul>
+                    <div class="grid-container my-3">
+                        <div class="grid-box bg-warning text-dark text-center rounded fw-bold d-flex align-items-center justify-content-center">A</div>
+                        <div class="grid-box bg-warning text-dark text-center rounded fw-bold d-flex align-items-center justify-content-center">B</div>
+                        <div class="grid-box bg-warning text-dark text-center rounded fw-bold d-flex align-items-center justify-content-center">C</div>
+                        <div class="grid-box bg-warning text-dark text-center rounded fw-bold d-flex align-items-center justify-content-center">D</div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Napomena:</strong> Grid je odličan za kompleksnije rasporede stranice.
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">CSS</span>
+                        <span class="badge bg-secondary me-2">Grid</span>
+                        <span class="badge bg-secondary">Layout</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Position Lesson -->
+            <div class="card shadow mb-4 lesson-card" id="position">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="card-title mb-0 h5">CSS Pozicioniranje</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Vrste pozicioniranja:</strong></p>
+                    <ul>
+                        <li><strong>static</strong> – zadano ponašanje</li>
+                        <li><strong>relative</strong> – pomicanje u odnosu na svoju poziciju</li>
+                        <li><strong>absolute</strong> – pozicioniranje unutar roditelja</li>
+                        <li><strong>fixed</strong> – fiksirano na ekranu</li>
+                    </ul>
+                    <div class="position-container my-3">
+                        <div class="relative-box bg-success text-white d-flex align-items-center justify-content-center rounded position-relative">
+                            Relative
+                            <div class="absolute-box bg-danger text-white rounded position-absolute">Absolute</div>
+                        </div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Napomena:</strong> Absolute elementi se pozicioniraju unutar prvog roditelja koji ima position: relative.
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">CSS</span>
+                        <span class="badge bg-secondary me-2">Position</span>
+                        <span class="badge bg-secondary">Layout</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
